@@ -8,6 +8,7 @@ import {
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { ButtonComponent } from '../components/button/button.component';
 import { InputComponent } from '../components/input/input.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tab1',
@@ -21,6 +22,7 @@ import { InputComponent } from '../components/input/input.component';
     ExploreContainerComponent,
     ButtonComponent,
     InputComponent,
+    CommonModule
   ],
   template: `
     <h1>Bienvenido a la página de inicio</h1>
@@ -32,9 +34,12 @@ import { InputComponent } from '../components/input/input.component';
   `,
 })
 export class Tab1Page {
-  name: string = '';
-  email: string = '';
-  password: string = '';
+  valveStatus: 'Abierta' | 'Cerrada' = 'Cerrada'; // Estado de la válvula
+  ambientHumidity: number = 65; // Humedad del ambiente (%)
+  soilHumidity: number = 45; // Humedad de la tierra (%)
+  temperature: number = 22; // Temperatura (°C)
 
-  constructor() {}
+  toggleValve(): void {
+    this.valveStatus = this.valveStatus === 'Abierta' ? 'Cerrada' : 'Abierta';
+  }
 }

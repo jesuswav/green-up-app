@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> Pruebas Componentes </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,5 +11,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <!-- Prueba para componente reutilizable de botón -->
+  <div class="button-container">
+    <h4>Pruebas para botones reutilizables</h4>
+    <app-button size="small">Botón Pequeño</app-button>
+    <app-button size="medium">Botón Mediano</app-button>
+    <app-button size="large">Botón Grande</app-button>
+    <app-button [disabled]="true">Botón Deshabilitado</app-button>
+    <app-button>Botón por Defecto</app-button>
+  </div>
 </ion-content>
