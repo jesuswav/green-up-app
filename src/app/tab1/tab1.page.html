@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Tab 1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,5 +11,40 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Prueba para componente reutilizable de botón -->
+  <div class="button-container">
+    <app-button size="small">Botón Pequeño</app-button>
+    <app-button size="medium">Botón Mediano</app-button>
+    <app-button size="large">Botón Grande</app-button>
+    <app-button [disabled]="true">Botón Deshabilitado</app-button>
+    <app-button>Botón por Defecto</app-button>
+  </div>
+
+  <!-- Prueba para inputs -->
+  <div>
+    <app-input
+      type="text"
+      placeholder="Ingresa tu nombre"
+      [(value)]="name"
+    ></app-input>
+    <app-input
+      type="email"
+      placeholder="Ingresa tu correo"
+      [(value)]="email"
+    ></app-input>
+    <app-input
+      type="password"
+      placeholder="Ingresa tu contraseña"
+      [(value)]="password"
+    ></app-input>
+    <app-input
+      type="text"
+      placeholder="Campo deshabilitado"
+      [disabled]="true"
+    ></app-input>
+
+    <p>Nombre: {{ name }}</p>
+    <p>Correo: {{ email }}</p>
+    <p>Contraseña: {{ password }}</p>
+  </div>
 </ion-content>

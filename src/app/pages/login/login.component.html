@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Tab 3 </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="login-container">
+    <h1>Iniciar Sesión</h1>
+    <form (ngSubmit)="onSubmit()" class="login-form">
+      <app-input
+        type="email"
+        placeholder="Correo electrónico"
+        [(value)]="email"
+      ></app-input>
+      <app-input
+        type="password"
+        placeholder="Contraseña"
+        [(value)]="password"
+      ></app-input>
+      <app-button type="submit" size="large">Iniciar Sesión</app-button>
+    </form>
+  </div>
+</ion-content>

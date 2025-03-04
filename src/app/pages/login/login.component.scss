@@ -1,0 +1,76 @@
+/* Estilos generales */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff; /* Texto blanco */
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en el texto */
+}
+
+/* Estilos del formulario */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilos para los inputs */
+app-input {
+  width: 100%;
+}
+
+/* Estilos para el botón */
+app-button {
+  width: 100%;
+  margin-top: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+app-button:hover {
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilos para el placeholder */
+::placeholder {
+  color: #999; /* Color del placeholder */
+  font-size: 14px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .login-form {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  app-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
