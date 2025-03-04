@@ -1,0 +1,7 @@
+{
+  "name": "green-up-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
